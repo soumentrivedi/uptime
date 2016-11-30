@@ -5,7 +5,8 @@
 <li>
 <div class="name">
     <a href="{{=  route + '/checks/' + stat.check._id +'?type=' + type + '&date=' + date }}">{{= stat.check.name }}</a>
-    <a href="{{= stat.check.url }}" target="_blank"><img src="{{= route }}/images/external-link-ltr-icon.png"></a>
+    <iframe src="{{= stat.check.url }}" frameborder=0 scrolling=no allowtransparency=true width=115 height=25 runat="server">
+	</iframe>    
 </div>
 {{- uptimeBar('check', {
         from: begin,
